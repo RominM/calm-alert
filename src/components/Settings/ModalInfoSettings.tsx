@@ -10,7 +10,7 @@ const ModalInfoSettings = () => {
         Mais fais nous confiance : ce n’est <strong className="modal-info-settings__strong">ni intrusif, ni moralisateur</strong>. Juste une aide pour remettre un peu de conscience dans tes gestes.
         <br />
         <br />
-        <strong className="modal-info-settings__strong">Tu peux tout modifier plus tard si tu veux. Mais essaie d’abord. Vois ce que ça change.</strong>
+        <strong className="modal-info-settings__strong">Tu peux tout modifier si tu veux. Mais essaie d’abord. Vois ce que ça change.</strong>
       </p>
     );
 }

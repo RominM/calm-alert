@@ -7,6 +7,10 @@
     max-height: 100dvh;
   }
   
-  .main {
-    height: calc(100dvh - 40px);
+.main {
+  height: calc(100dvh - 40px);
+}
+
+p {
+  line-height: 18px;
 }

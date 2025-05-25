@@ -1,0 +1,8 @@
+@use "../../../style/mixins";
+
+.notifications-settings {
+  @include mixins.baseFlex;
+  flex-direction: column;
+  margin: 20px 0;
+  gap: 20px;
+}

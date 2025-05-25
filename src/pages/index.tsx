@@ -2,7 +2,7 @@ import "../style/global.scss";
 import { useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
 import Settings from "../components/Settings/Settings";
-import Mute from "../components/Mute/MuteModal";
+import MuteModal from "../components/Mute/MuteModal";
 import Report from "./report";
 import Home from "./home";
 
@@ -25,8 +25,7 @@ const Pages = () => {
         {page === "report" && <Report />}
         {showSettings && <Settings onClose={() => setShowSettings(false)} />}
         {showMuteModal && (
-          <Mute
-            isMuted={isMuted}
+          <MuteModal
             onToggleMute={() => setIsMuted(prev => !prev)}
             onClose={() => setShowMuteModal(false)}
           />

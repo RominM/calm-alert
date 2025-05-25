@@ -1,0 +1,7 @@
+@use "../../../style/mixins";
+
+.daily-report-settings {
+    @include mixins.baseFlex;
+    flex-direction: column;
+    gap: 20px;
+}

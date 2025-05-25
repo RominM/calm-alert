@@ -2,10 +2,20 @@
 @use "../../style/mixins";
 
 .settings {
-    &__info {
-      @include mixins.baseFlex;
-      text-align: center;
-      color: variables.$blue-gray;
-      cursor: pointer;
-    }
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  &__description {
+    font-size: 12px;
+    text-align: center;
+  }
+  &__info {
+    @include mixins.baseFlex;
+    text-align: center;
+    color: variables.$blue-gray;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 100;
+    font-family: variables.$paragraph-font;
+  }
 }

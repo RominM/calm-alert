@@ -1,3 +1,24 @@
+@font-face {
+  font-family: Manrope;
+  src: url('/src/assets/fonts/Manrope-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: EB_Garamond;
+  src: url('/src/assets/fonts/EBGaramond-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Appliquer globalement ou dans une classe */
+body {
+  font-family: Manrope, sans-serif;
+}
+
 // src/styles/_variables.scss
 
 //colors
@@ -11,6 +32,6 @@ $modal-layer: rgba(26, 26, 26, 0.6);
 
 // typography
 $font-size-base: 12px;
-$title-font: "EB Garamond", serif;
-$button-font: "EB Garamond", serif;
-$paragraph-font: "Manrope", sans-serif;
+$title-font: EB_Garamond, serif;
+$button-font: EB_Garamond, serif;
+$paragraph-font: Manrope, sans-serif;

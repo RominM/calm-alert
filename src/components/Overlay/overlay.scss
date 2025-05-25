@@ -10,7 +10,6 @@
     padding: 60px 20px 20px 20px;
     background-color: #F5F1EA;
     z-index: 1000;
-    // box-shadow: 0 -100px 300px #6b6b6b;
     animation: slideUp 0.5s ease-in-out;
     &__title {
         font-family: "EB Garamond", serif;
@@ -32,10 +31,8 @@
 @keyframes slideUp {
   from {
     transform: translateY(100%);
-    opacity: 0;
   }
   to {
     transform: translateY(0%);
-    opacity: 1;
   }
 }

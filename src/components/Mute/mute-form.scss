@@ -1,0 +1,25 @@
+@use "../../style/mixins";
+@use "../../style/variables";
+
+.mute-form {
+  @include mixins.baseFlex;
+  flex-direction: column;
+  
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    font-family: variables.$paragraph-font;
+  }
+  &__checkboxes {
+    @include mixins.baseFlex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+    &__label {
+      font-size: 10px;
+      font-weight: 100;
+      font-family: variables.$paragraph-font;
+      cursor: pointer;
+    }
+  } 
+}
