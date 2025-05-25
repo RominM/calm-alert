@@ -1,8 +1,8 @@
-import "../style/.global.css";
+import "../style/global.scss";
 import { useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
 import Settings from "../components/Settings/Settings";
-import Mute from "../components/Mute/Mute";
+import Mute from "../components/Mute/MuteModal";
 import Report from "./report";
 import Home from "./home";
 
@@ -20,7 +20,7 @@ const Pages = () => {
         onShowSettings={() => setShowSettings(true)}
       />
 
-      <main>
+      <main className="main">
         {page === "home" && <Home />}
         {page === "report" && <Report />}
         {showSettings && <Settings onClose={() => setShowSettings(false)} />}

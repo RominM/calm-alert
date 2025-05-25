@@ -1,0 +1,104 @@
+@use "../../../style/variables";
+
+.break-button {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  &__orbiting-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  &__orbiter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: center;
+  }
+  &__orb {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+  &__orbiter-1 {
+    animation: rotate 12s linear infinite;
+  }
+  &__orb-1 {
+    width: 50px;
+    height: 50px;
+    background-color: variables.$red-orange;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__orbiter-2 {
+    animation: rotateReverse 18s linear infinite;
+  }
+  &__orb-2 {
+    width: 30px;
+    height: 30px;
+    background-color: variables.$pink;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+  &__orbiter-3 {
+    animation: rotate 20s linear infinite;
+  }
+  &__orb-3 {
+    width: 40px;
+    height: 40px;
+    background-color: variables.$blue-gray;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%) translateY(50%);
+  }
+  &__orbiter-4 {
+    animation: rotateReverse 22s linear infinite;
+  }
+  &__orb-4 {
+    width: 20px;
+    height: 20px;
+    background-color: variables.$green-blue;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(50%);
+  }
+  &__main-button {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: variables.$green-blue;
+    color: variables.$white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 0 0 10px rgba(122, 158, 159, 0.2);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}

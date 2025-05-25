@@ -1,0 +1,18 @@
+@use "../../../style/variables";
+
+.button-cta {
+    font-family: variables.$button-font;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 8px;
+    border: none;
+    color: variables.$white;
+    cursor: pointer;
+    &.confirm {
+      background-color: variables.$green-blue;
+    }
+    &.cancel {
+      background-color: variables.$red-orange;
+    }
+}

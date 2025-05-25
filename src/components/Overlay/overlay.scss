@@ -7,9 +7,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 63px;
+    padding: 60px 20px 20px 20px;
     background-color: #F5F1EA;
     z-index: 1000;
+    // box-shadow: 0 -100px 300px #6b6b6b;
+    animation: slideUp 0.5s ease-in-out;
     &__title {
         font-family: "EB Garamond", serif;
         font-size: 1.5rem;
@@ -25,8 +27,15 @@
         font-size: 1.2rem;
         cursor: pointer;
     }
-    
-    &__content {
-        padding: 20px;
-    }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }

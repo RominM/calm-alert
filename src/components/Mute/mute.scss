@@ -1,0 +1,13 @@
+@use "../../style/mixins";
+
+.mute {
+  @include mixins.baseFlex;
+  flex-direction: column;
+  
+  &__checkboxes {
+    @include mixins.baseFlex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  } 
+}

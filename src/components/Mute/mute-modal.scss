@@ -1,0 +1,6 @@
+@use "../../style/mixins";
+
+.mute-modal {
+    @include mixins.baseFlex;
+    flex-direction: column;
+}

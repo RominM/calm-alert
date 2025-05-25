@@ -12,7 +12,7 @@ export const Modal = ({ title, children, onClose }: ModalProps) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        {title && <Title title={title} size="22px" />}
+        {title && <Title title={title} />}
         <button className="modal-content__close" onClick={onClose}>
           ✕
         </button>
