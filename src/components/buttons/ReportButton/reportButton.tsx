@@ -5,7 +5,7 @@ import "./report-button.scss";
 const ReportButton = ({ onClick, isActive }: { onClick: () => void, isActive: boolean }) => {
 
   return (
-    <button onClick={onClick} className={`report-button ${isActive ? "active" : ""}`}>
+    <button onClick={onClick} className={`report-button nav__buttons ${isActive ? "active" : ""}`}>
       <FontAwesomeIcon icon={faClock} />
     </button>
   );

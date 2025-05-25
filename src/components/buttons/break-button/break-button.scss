@@ -3,6 +3,7 @@
 .break-button {
   position: relative;
   width: 100%;
+  max-width: 450px;
   aspect-ratio: 1 / 1;
   &__orbiting-shapes {
     position: absolute;
