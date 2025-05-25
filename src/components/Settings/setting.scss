@@ -1,0 +1,11 @@
+@use "../../style/variables";
+@use "../../style/mixins";
+
+.settings {
+    &__info {
+      @include mixins.baseFlex;
+      text-align: center;
+      color: variables.$blue-gray;
+      cursor: pointer;
+    }
+}

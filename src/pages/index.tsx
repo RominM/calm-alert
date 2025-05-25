@@ -1,8 +1,10 @@
+import "../style/.global.css";
 import { useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
-import Settings from "../components/Settings/settings";
-import Home from "./home";
+import Settings from "../components/Settings/Settings";
 import Mute from "../components/Mute/Mute";
+import Report from "./report";
+import Home from "./home";
 
 const Pages = () => {
   const [page, setPage] = useState<"home" | "report">("home");
@@ -11,7 +13,7 @@ const Pages = () => {
   const [isMuted, setIsMuted] = useState(false);
 
   return (
-    <div>
+    <div className="layout">
       <Navigation
         isMuted={isMuted}
         onToggleMuteModal={() => setShowMuteModal(true)}

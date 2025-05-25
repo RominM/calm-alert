@@ -12,7 +12,7 @@ caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 main, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, audio, video, button {
   margin: 0;
   padding: 0;
   border: 0;
@@ -29,8 +29,8 @@ footer, header, hgroup, main, menu, nav, section {
 
 body {
   line-height: 1;
-  background-color: #fff;
-  color: #000;
+  background-color: #F5F1EA;
+  color: #1A1A1A;
 }
 
 ol, ul {
@@ -50,6 +50,11 @@ q::before, q::after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+button {
+  border: none;
+  background: none;
 }
 
 *, *::before, *::after {

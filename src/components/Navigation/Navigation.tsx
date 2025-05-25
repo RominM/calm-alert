@@ -1,5 +1,7 @@
 import MuteModeButton from "../buttons/muteModeButton/muteModeButton";
 import SettingsButton from "../buttons/SettingsButton/SettingsButton";
+import ReportButton from "../buttons/ReportButton/reportButton";
+import "./navigation.css";
 
 interface NavigationProps {
   isMuted: boolean;
@@ -9,9 +11,12 @@ interface NavigationProps {
 
 const Navigation = ({ isMuted, onToggleMuteModal, onShowSettings }: NavigationProps) => {
   return (
-    <nav>
+    <nav className="navigation">
       <MuteModeButton isMuted={isMuted} onClick={onToggleMuteModal} />
-      <SettingsButton onClick={onShowSettings} />
+      <div>
+        <ReportButton onClick={() => setPage("report")}/>
+        <SettingsButton onClick={onShowSettings} />
+      </div>
     </nav>
   );
 };
