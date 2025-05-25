@@ -57,7 +57,7 @@ const Overlay = ({ title, onClose, children }: OverlayProps) => {
           dragElastic={0.2}
           onDragEnd={(e, info) => handleDragEnd(e as PointerEvent, info)}
         >
-          {title && <h2 className="overlay__title">{title}</h2>}
+          {title && <h1 className="main-title">{title}</h1>}
           <div className="overlay__cross">
             <FontAwesomeIcon icon={faXmark} onClick={onClose} />
           </div>

@@ -1,5 +1,5 @@
 import "./mute-modal.scss";
-import Modal from "../Modal/modal";
+import Modal from "../Modal/Modal";
 import MuteForm from "./MuteForm";
 
 const MuteModal = ({ onClose, onToggleMute }: { onClose: () => void; onToggleMute: () => void }) => {

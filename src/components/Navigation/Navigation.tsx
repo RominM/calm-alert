@@ -6,15 +6,17 @@ import "./navigation.scss";
 interface NavigationProps {
   isMuted: boolean;
   onToggleMuteModal: () => void;
-  onShowSettings: () => void;
+  onShowSettings: () => void; 
+  onToggleReport: () => void;
+  isReportActive: boolean;
 }
 
-const Navigation = ({ isMuted, onToggleMuteModal, onShowSettings }: NavigationProps) => {
+const Navigation = ({ isMuted, onToggleMuteModal, onShowSettings, onToggleReport, isReportActive }: NavigationProps) => {
   return (
     <nav className="navigation">
       <MuteModeButton isMuted={isMuted} onClick={onToggleMuteModal} />
       <div className="navigation__grouped-buttons">
-        <ReportButton onClick={() => setPage("report")}/>
+        <ReportButton onClick={onToggleReport} isActive={isReportActive}/>
         <SettingsButton onClick={onShowSettings} />
       </div>
     </nav>
@@ -22,3 +24,6 @@ const Navigation = ({ isMuted, onToggleMuteModal, onShowSettings }: NavigationPr
 };
 
 export default Navigation;
+
+
+

@@ -2,7 +2,7 @@ import "./setting.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
-import Modal from "../Modal/modal";
+import Modal from "../Modal/Modal";
 import Overlay from "../Overlay/Overlay";
 import ModalInfoSettings from "./ModalInfoSettings";
 import NotificationsSettings from "./notifications-settings/NotificationsSettings";
