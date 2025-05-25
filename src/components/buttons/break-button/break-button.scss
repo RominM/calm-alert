@@ -8,7 +8,7 @@
   &__orbiting-shapes {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 5%;
     width: 100%;
     height: 100%;
     pointer-events: none;
@@ -34,7 +34,7 @@
     height: 50px;
     background-color: variables.$red-orange;
     top: 0;
-    left: 50%;
+    left: 80%;
     transform: translateX(-50%);
   }
   &__orbiter-2 {

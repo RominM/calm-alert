@@ -1,11 +1,12 @@
 import "../style/global.scss";
-import "./page.scss";
+import "./index.scss";
 import { useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
 import Settings from "../components/Settings/Settings";
 import MuteModal from "../components/Mute/MuteModal";
 import Report from "../components/Report/Report";
 import Home from "../components/Home/Home";
+import AgreementModal from "../components/agreement-modal/AgreementModal";
 
 type View = "Home" | "Report";
 
@@ -15,6 +16,7 @@ const Pages = () => {
   const [showSettings, setShowSettings] = useState(false);
   const [showMuteModal, setShowMuteModal] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
+  const [showAgreementModal, setShowAgreementModal] = useState(true);
 
   const handleToggleReport = () => {
     setTransitionDirection(view === "Home" ? "left" : "right");
@@ -47,6 +49,12 @@ const Pages = () => {
           <MuteModal
             onToggleMute={() => setIsMuted(prev => !prev)}
             onClose={() => setShowMuteModal(false)}
+          />
+        )}
+
+        {showAgreementModal && (
+          <AgreementModal
+            onClose={() => setShowAgreementModal(false)}
           />
         )}
       </main>
