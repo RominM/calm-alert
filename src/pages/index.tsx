@@ -1,0 +1,37 @@
+import { useState } from "react";
+import Navigation from "../components/Navigation/Navigation";
+import Settings from "../components/Settings/settings";
+import Home from "./home";
+import Mute from "../components/Mute/Mute";
+
+const Pages = () => {
+  const [page, setPage] = useState<"home" | "report">("home");
+  const [showSettings, setShowSettings] = useState(false);
+  const [showMuteModal, setShowMuteModal] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+
+  return (
+    <div>
+      <Navigation
+        isMuted={isMuted}
+        onToggleMuteModal={() => setShowMuteModal(true)}
+        onShowSettings={() => setShowSettings(true)}
+      />
+
+      <main>
+        {page === "home" && <Home />}
+        {page === "report" && <Report />}
+        {showSettings && <Settings onClose={() => setShowSettings(false)} />}
+        {showMuteModal && (
+          <Mute
+            isMuted={isMuted}
+            onToggleMute={() => setIsMuted(prev => !prev)}
+            onClose={() => setShowMuteModal(false)}
+          />
+        )}
+      </main>
+    </div>
+  );
+} 
+
+export default Pages;

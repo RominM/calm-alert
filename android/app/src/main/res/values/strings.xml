@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">calm-alert</string>
+    <string name="title_activity_main">calm-alert</string>
+    <string name="package_name">com.tonapp.calmalert</string>
+    <string name="custom_url_scheme">com.tonapp.calmalert</string>
+</resources>
