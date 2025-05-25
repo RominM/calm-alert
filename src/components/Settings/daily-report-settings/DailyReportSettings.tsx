@@ -4,7 +4,7 @@ import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 const DailyReportSettings = () => {
     return (
       <div>
-        <Title title="Rapports quotidiens" icon={faChartLine}/>
+        <Title title="Rapports quotidiens" icon={faChartLine} />
 
         {/* add content */}
       </div>

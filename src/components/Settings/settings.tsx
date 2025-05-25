@@ -1,11 +1,11 @@
+import "./setting.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Modal from "../modal/modal";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
+import Modal from "../modal/modal";
 import Overlay from "../Overlay/Overlay";
 import ModalInfoSettings from "./ModalInfoSettings";
-import "./setting.scss";
-import NotificationsSettings from "./notificaitons-settings/NotificationsSettings";
+import NotificationsSettings from "./notifications-settings/NotificationsSettings";
 import DailyReportSettings from "./daily-report-settings/DailyReportSettings";
 
 const Settings = ({onClose}: {onClose: () => void}) => {
@@ -22,7 +22,6 @@ const Settings = ({onClose}: {onClose: () => void}) => {
 
           <DailyReportSettings />
 
-          
           {showInfoModal && (
             <Modal onClose={() => setShowInfoModal(false)} title="Réglage automatique">
               <ModalInfoSettings />

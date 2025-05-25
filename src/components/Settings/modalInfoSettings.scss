@@ -1,0 +1,11 @@
+@use "../../style/variables";
+
+.modal-info-settings {
+font-family: variables.$paragraph-font;
+font-size: 12px;
+font-weight: 100;
+  &__strong {
+    font-weight: bold;
+  }
+}
+

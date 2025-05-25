@@ -5,8 +5,8 @@ import "./title.scss";
 const Title = ({title, icon}: {title: string, icon?: IconProp}) => {
     return (
         <h2 className="title">
-            {icon && <FontAwesomeIcon icon={icon} />}
-            {title}
+          {icon && <FontAwesomeIcon icon={icon} />}
+          {title}
         </h2>
     );
 }
