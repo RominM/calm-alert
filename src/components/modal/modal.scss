@@ -43,6 +43,9 @@
     font-size: 1.2rem;
     cursor: pointer;
   }
+  &.motion-div {
+    will-change: transform;
+  }
 }
 
 
