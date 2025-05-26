@@ -12,7 +12,9 @@ const Report = () => {
   return (
     <div className="report">
       <h1 className="main-title">Rapports</h1>
-      <p className="report__subtitle">Suis l’évolution de tes interaction avec ton appareil et vois comment elles évolue. On espère que ça te sera bénéfique !</p>
+      <p className="report__subtitle">Suis l’évolution de tes interaction avec ton appareil et vois comment elles évoluent.
+        <br />
+        On espère que ça te sera bénéfique !</p>
 
       {userReportsData.map((report, index) => {
         return (

@@ -54,6 +54,7 @@ const Settings = ({ onClose }: { onClose: () => void }) => {
           isOpen={showInfoModal}
           onClose={() => setShowInfoModal(false)}
           title="Réglage automatique"
+          activateClose={true}
         >
           <ModalInfoSettings />
         </Modal>
