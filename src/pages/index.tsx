@@ -2,12 +2,12 @@ import "../style/global.scss";
 import "./index.scss";
 import { useState } from "react";
 import Navigation from "../components/Navigation/Navigation";
-import Settings from "../components/Settings/Settings";
 import MuteModal from "../components/Mute/MuteModal";
 import Report from "../components/Report/Report";
 import Home from "../components/Home/Home";
 import AgreementModal from "../components/agreement-modal/AgreementModal";
 import { useConsent } from "../hooks/useConsent";
+import Settings from "../components/Settings/Settings";
 
 type View = "Home" | "Report";
 

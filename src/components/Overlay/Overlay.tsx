@@ -23,7 +23,7 @@ const Overlay = ({ title, onClose, children }: OverlayProps) => {
     controls.start({ y: 0 });
   }, [controls]);
 
-  const handleDragEnd = (e: PointerEvent, info: PanInfo) => {
+  const handleDragEnd = (_e: PointerEvent, info: PanInfo) => {
     const isAtTop = contentRef.current?.scrollTop === 0;
     const threshold = window.innerHeight / 2;
 
