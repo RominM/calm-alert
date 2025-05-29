@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace "com.tonapp.calmalert"
+    namespace "com.tonapp.tu_le_sais_deja"
     compileSdk rootProject.ext.compileSdkVersion
     defaultConfig {
-        applicationId "com.tonapp.calmalert"
+        applicationId "com.tonapp.tu_le_sais_deja"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

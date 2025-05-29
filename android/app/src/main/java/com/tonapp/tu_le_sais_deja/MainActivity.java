@@ -1,4 +1,4 @@
-package com.tonapp.calmalert;
+package com.tonapp.tu_le_sais_deja;
 
 import com.getcapacitor.BridgeActivity;
 

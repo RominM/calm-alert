@@ -1,9 +1,9 @@
-import { CapacitorConfig } from '@capacitor/cli';
+import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'com.app.calmalert',
-  appName: 'Tu le sais déjà',
-  webDir: 'dist',
+  appId: 'com.tonapp.tu_le_sais_deja',
+  appName: 'calm-alert',
+  webDir: 'dist'
 };
 
 export default config;
