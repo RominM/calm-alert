@@ -30,7 +30,6 @@
         <!-- Service pour le timer -->
         <service
             android:name=".services.MyTimerService"
-            android:foregroundServiceType="location"
             android:exported="false"
             tools:ignore="ForegroundServicePermission" />
 

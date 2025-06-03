@@ -9,6 +9,7 @@ import android.os.Build;
 import android.os.Handler;
 import android.os.IBinder;
 import android.os.Looper;
+import android.util.Log;
 
 import androidx.annotation.Nullable;
 import androidx.core.app.NotificationCompat;
@@ -21,6 +22,7 @@ public class MyTimerService extends Service {
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+
         createNotificationChannel();
 
         Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
@@ -29,14 +31,14 @@ public class MyTimerService extends Service {
                 .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
                 .build();
 
-        startForeground(1, notification);
+        //startForeground(1, notification);
 
         handler = new Handler(Looper.getMainLooper());
         runnable = new Runnable() {
             @Override
             public void run() {
                 sendNotification("Tu es sur ton téléphone depuis 10 minutes !");
-                handler.postDelayed(this, 1 * 60 * 1000); // toutes les 10 minutes
+                handler.postDelayed(this, 60 * 500); // toutes les 10 minutes
             }
         };
         handler.post(runnable);
