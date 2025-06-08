@@ -1,5 +1,6 @@
 package com.tonapp.tu_le_sais_deja.services;
 
+import android.annotation.SuppressLint;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -20,8 +21,10 @@ public class MyTimerService extends Service {
     private Handler handler;
     private Runnable runnable;
 
+    @SuppressLint("ForegroundServiceType")
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
+        Log.d("MyTimerService", "Service démarré");
 
         createNotificationChannel();
 
@@ -31,20 +34,28 @@ public class MyTimerService extends Service {
                 .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
                 .build();
 
-        //startForeground(1, notification);
+        Log.d("MyTimerService", "BEFORE startForeground");
+            startForeground(1, notification);
 
-        handler = new Handler(Looper.getMainLooper());
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                sendNotification("Tu es sur ton téléphone depuis 10 minutes !");
-                handler.postDelayed(this, 60 * 500); // toutes les 10 minutes
-            }
-        };
-        handler.post(runnable);
 
-        return START_STICKY;
-    }
+            Log.d("MyTimerService", "AFTER startForeground");
+
+            handler = new Handler(Looper.getMainLooper());
+            runnable = new Runnable() {
+                @Override
+                public void run() {
+                    Log.d("MyTimerService", "Runnable exécuté — Envoi notification");
+                    sendNotification("Tu es sur ton téléphone depuis 30 secondes !");
+                    handler.postDelayed(this, 30 * 1000);
+                }
+            };
+
+            handler.postDelayed(runnable, 30 * 1000);
+
+            return START_STICKY;
+        }
+
+
 
     @Override
     public void onDestroy() {
@@ -61,15 +72,23 @@ public class MyTimerService extends Service {
     }
 
     private void sendNotification(String content) {
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-                .setContentTitle("CalmAlert")
-                .setContentText(content)
-                .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
-                .build();
+        try {
+            Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
+                    .setContentTitle("CalmAlert")
+                    .setContentText(content)
+                    .setSmallIcon(android.R.drawable.ic_lock_idle_alarm)
+                    .build();
 
-        NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
-        manager.notify(2, notification);
+            NotificationManager manager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+            if (manager != null) {
+                manager.notify(2, notification);
+            }
+            Log.d("MyTimerService", "Notification envoyée avec succès");
+        } catch (Exception e) {
+            Log.e("MyTimerService", "Erreur lors de l'envoi de la notification", e);
+        }
     }
+
 
     private void createNotificationChannel() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
